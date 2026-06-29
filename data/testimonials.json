@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Bapak Andi",
+    "role": "Pemilik Rumah, Jakarta",
+    "content": "Saya sangat puas dengan layanan Pindahan Rumah. Barang-barang saya tiba dengan aman dan tepat waktu. Tim sangat profesional dan ramah.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Ibu Sari",
+    "role": "Manajer Kantor, Bandung",
+    "content": "Pindahan kantor kami berjalan lancar tanpa downtime. Semua peralatan server dan dokumen penting tertangani dengan baik.",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Bapak Budi",
+    "role": "Penghuni Apartemen, Surabaya",
+    "content": "Proses pindahan apartemen sangat mudah berkat koordinasi yang baik dengan pengelola gedung. Terima kasih Pindahan Rumah!",
+    "rating": 4
+  }
+]

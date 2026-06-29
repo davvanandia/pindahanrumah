@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "Pindahan Rumah",
+    "description": "Layanan komprehensif untuk tipe rumah 36 hingga 100+. Termasuk packing pecah belah & bongkar pasang furniture.",
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+    "features": ["Packing Pecah Belah", "Reposisi Barang"],
+    "popular": true
+  },
+  {
+    "id": 2,
+    "title": "Pindahan Kantor",
+    "description": "Relokasi aset bisnis: Meja, kursi, arsip penting, hingga server. Minimal downtime untuk operasional Anda.",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop",
+    "features": ["Labeling Sistematis", "Penanganan Server"]
+  },
+  {
+    "id": 3,
+    "title": "Pindahan Apartemen",
+    "description": "Koordinasi intensif dengan pengelola gedung & penggunaan alat khusus untuk akses terbatas.",
+    "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
+    "features": ["Izin Pengelola Gedung", "Trolley Khusus"]
+  }
+]

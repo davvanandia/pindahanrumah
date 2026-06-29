@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "question": "Berapa lama waktu yang dibutuhkan untuk proses pindahan?",
+    "answer": "Waktu pindahan bervariasi tergantung jarak dan volume barang. Untuk pindahan rumah standar, biasanya memakan waktu 1-2 hari. Kami akan memberikan estimasi waktu setelah survey."
+  },
+  {
+    "id": 2,
+    "question": "Apakah barang saya akan diasuransikan?",
+    "answer": "Ya, semua barang yang dipindahkan oleh kami mendapatkan perlindungan asuransi penuh. Kami bekerja sama dengan perusahaan asuransi terpercaya untuk memberikan rasa aman kepada klien."
+  },
+  {
+    "id": 3,
+    "question": "Apakah saya perlu membongkar furniture sendiri?",
+    "answer": "Tidak. Tim kami akan melakukan bongkar pasang furniture secara profesional. Kami memiliki alat dan tenaga ahli untuk menangani semua jenis furniture."
+  },
+  {
+    "id": 4,
+    "question": "Bagaimana cara mendapatkan estimasi biaya?",
+    "answer": "Anda dapat mengisi formulir estimasi di halaman ini atau menghubungi hotline kami. Kami akan segera memberikan penawaran harga terbaik."
+  }
+]
