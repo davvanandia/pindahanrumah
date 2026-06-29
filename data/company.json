@@ -1,14 +1,30 @@
 {
-  "name": "Pindahan Rumah",
+  "name": "PindahanRumah",
   "tagline": "Jasa Pindahan Profesional & Terpercaya",
-  "description": "Solusi pindahan terlengkap untuk Kantor, Rumah, Apartemen, hingga Gudang dengan jaminan keamanan 100%.",
+  "description": "Penyedia jasa pindahan profesional dengan standar kualitas internasional. Kami mengutamakan keamanan aset Anda.",
   "phone": "0812-3456-7890",
+  "whatsapp": "6281234567890",
   "email": "info@pindahanrumah.id",
   "address": "Jl. Raya Utama No. 88, Kawasan Bisnis Jakarta Timur, Indonesia",
-  "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260485284!2d106.8288756!3d-6.194459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e1c7b1f3%3A0x5b3f5f2e1c7b1f3!2sJakarta!5e0!3m2!1sen!2sid!4v1690000000000",
+  "operationalHours": "Senin – Sabtu: 07.00 – 20.00 WIB | Minggu: 08.00 – 17.00 WIB",
+  "mapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.3794155408!2d106.7570533!3d-6.2297465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b7b17088fb1%3A0x55fd5afdc41e0!2sJakarta%20Timur%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid",
   "social": {
-    "whatsapp": "https://wa.me/6281234567890",
     "instagram": "https://instagram.com/pindahanrumah",
-    "facebook": "https://facebook.com/pindahanrumah"
-  }
+    "facebook": "https://facebook.com/pindahanrumah",
+    "tiktok": "https://tiktok.com/@pindahanrumah"
+  },
+  "stats": [
+    { "value": "5000+", "label": "Pelanggan Puas" },
+    { "value": "10+", "label": "Tahun Pengalaman" },
+    { "value": "50+", "label": "Armada Kendaraan" },
+    { "value": "100%", "label": "Jaminan Keamanan" }
+  ],
+  "vision": "Menjadi perusahaan jasa pindahan terpercaya dan terdepan di Indonesia dengan standar internasional.",
+  "mission": [
+    "Memberikan layanan pindahan yang aman, cepat, dan profesional.",
+    "Menggunakan peralatan modern dan armada terawat untuk menjaga keamanan aset pelanggan.",
+    "Membangun kepercayaan melalui transparansi harga dan komunikasi yang jelas.",
+    "Terus berinovasi dalam metode packing dan relokasi demi kepuasan pelanggan."
+  ],
+  "history": "SAGA MOVERS didirikan pada tahun 2014 oleh sekelompok profesional logistik yang berkomitmen untuk mengubah industri jasa pindahan Indonesia. Berawal dari 3 armada kendaraan dan tim kecil yang berdedikasi, kami telah berkembang menjadi perusahaan relokasi terkemuka dengan lebih dari 50 armada dan ratusan tenaga ahli terlatih. Selama satu dekade, kami telah menangani lebih dari 5.000 proyek pindahan — dari rumah minimalis hingga relokasi kantor korporat berskala besar. Kepercayaan pelanggan adalah fondasi pertumbuhan kami."
 }

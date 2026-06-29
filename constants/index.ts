@@ -1,14 +1,10 @@
-export const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Tentang", href: "/tentang" },
-  { label: "Layanan", href: "/layanan" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Kontak", href: "/kontak" },
-];
+export const NAV_LINKS = [
+  { href: '/', label: 'Home' },
+  { href: '/layanan', label: 'Layanan' },
+  { href: '/tentang', label: 'Tentang Kami' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/kontak', label: 'Kontak' },
+]
 
-export const statsData = [
-  { label: "Proyek Selesai", value: "500+" },
-  { label: "Klien Puas", value: "98%" },
-  { label: "Tim Profesional", value: "25+" },
-  { label: "Kota Jangkauan", value: "10+" },
-];
+export const SITE_URL = 'https://pindahanrumah.online'

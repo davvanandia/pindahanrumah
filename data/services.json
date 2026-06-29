@@ -1,24 +1,86 @@
 [
   {
-    "id": 1,
+    "id": "pindahan-rumah",
     "title": "Pindahan Rumah",
+    "slug": "pindahan-rumah",
+    "category": "utama",
+    "badge": "POPULAR",
+    "image": "/images/house-moving.jpg",
+    "imageAlt": "Ruang tamu modern yang siap dipindahkan",
     "description": "Layanan komprehensif untuk tipe rumah 36 hingga 100+. Termasuk packing pecah belah & bongkar pasang furniture.",
-    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
-    "features": ["Packing Pecah Belah", "Reposisi Barang"],
-    "popular": true
+    "features": ["Packing Pecah Belah", "Reposisi Barang", "Bongkar Pasang Furniture", "Asuransi Barang"],
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Rumah"
   },
   {
-    "id": 2,
+    "id": "pindahan-kantor",
     "title": "Pindahan Kantor",
+    "slug": "pindahan-kantor",
+    "category": "utama",
+    "badge": null,
+    "image": "/images/office-moving.jpg",
+    "imageAlt": "Kantor modern siap direlokasi",
     "description": "Relokasi aset bisnis: Meja, kursi, arsip penting, hingga server. Minimal downtime untuk operasional Anda.",
-    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop",
-    "features": ["Labeling Sistematis", "Penanganan Server"]
+    "features": ["Labeling Sistematis", "Penanganan Server", "Jadwal Fleksibel", "Tim Berpengalaman"],
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Kantor"
   },
   {
-    "id": 3,
+    "id": "pindahan-apartemen",
     "title": "Pindahan Apartemen",
+    "slug": "pindahan-apartemen",
+    "category": "utama",
+    "badge": null,
+    "image": "/images/apartment-moving.jpg",
+    "imageAlt": "Apartemen mewah modern",
     "description": "Koordinasi intensif dengan pengelola gedung & penggunaan alat khusus untuk akses terbatas.",
-    "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
-    "features": ["Izin Pengelola Gedung", "Trolley Khusus"]
+    "features": ["Izin Pengelola Gedung", "Trolley Khusus", "Packing Anti Gores", "Koordinasi Lift"],
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Apartemen"
+  },
+  {
+    "id": "jasa-packing",
+    "title": "Jasa Packing Profesional",
+    "slug": "jasa-packing",
+    "category": "spesialis",
+    "badge": null,
+    "image": "/images/packing.jpg",
+    "imageAlt": "Material packing profesional: bubble wrap dan kardus",
+    "description": "Perlindungan berlapis menggunakan Bubble Wrap, Stretch Film, Kardus Double Wall, hingga Wooden Crate untuk barang sangat berharga.",
+    "features": ["Bubble Wrap Premium", "Kardus Double Wall", "Stretch Film", "Wooden Crate"],
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Jasa Packing Profesional"
+  },
+  {
+    "id": "pindahan-gudang",
+    "title": "Pindahan Gudang",
+    "slug": "pindahan-gudang",
+    "category": "spesialis",
+    "badge": null,
+    "image": "/images/warehouse.jpg",
+    "imageAlt": "Gudang industri besar dan modern",
+    "description": "Penanganan stok barang, bongkar rak industri, hingga relokasi mesin berat secara presisi.",
+    "features": ["Bongkar Rak Industri", "Relokasi Mesin Berat", "Penanganan Stok", "Tim Ahli Gudang"],
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Gudang"
+  },
+  {
+    "id": "bongkar-pasang-furniture",
+    "title": "Bongkar Pasang Furniture",
+    "slug": "bongkar-pasang-furniture",
+    "category": "spesialis",
+    "badge": null,
+    "image": "/images/furniture.jpg",
+    "imageAlt": "Tim ahli memasang furniture",
+    "description": "Tim ahli untuk Kitchen Set, tempat tidur king size, hingga lemari wardrobe custom.",
+    "features": ["Kitchen Set", "Tempat Tidur King Size", "Lemari Wardrobe Custom", "Garansi Pemasangan"],
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Bongkar Pasang Furniture"
+  },
+  {
+    "id": "angkut-barang-berat",
+    "title": "Angkut Barang Berat (Handling)",
+    "slug": "angkut-barang-berat",
+    "category": "spesialis",
+    "badge": null,
+    "image": "/images/heavy-lifting.jpg",
+    "imageAlt": "Truk logistik PindahanRumah",
+    "description": "Brankas besar, Mesin Industri, Genset, hingga Piano Grand. Kami memiliki alat angkut hidrolik dan tim terlatih.",
+    "features": ["Alat Angkut Hidrolik", "Brankas & Mesin Berat", "Piano Grand", "Tim Terlatih Khusus"],
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Angkut Barang Berat"
   }
 ]

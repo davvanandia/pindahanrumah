@@ -1,22 +1,42 @@
 [
   {
     "id": 1,
-    "question": "Berapa lama waktu yang dibutuhkan untuk proses pindahan?",
-    "answer": "Waktu pindahan bervariasi tergantung jarak dan volume barang. Untuk pindahan rumah standar, biasanya memakan waktu 1-2 hari. Kami akan memberikan estimasi waktu setelah survey."
+    "question": "Berapa biaya jasa pindahan rumah?",
+    "answer": "Biaya jasa pindahan kami bervariasi tergantung jarak, volume barang, dan layanan tambahan yang dipilih. Untuk rumah tipe 36, estimasi mulai dari Rp 1.500.000. Hubungi kami untuk mendapatkan penawaran harga yang akurat dan transparan."
   },
   {
     "id": 2,
-    "question": "Apakah barang saya akan diasuransikan?",
-    "answer": "Ya, semua barang yang dipindahkan oleh kami mendapatkan perlindungan asuransi penuh. Kami bekerja sama dengan perusahaan asuransi terpercaya untuk memberikan rasa aman kepada klien."
+    "question": "Apakah barang saya diasuransikan selama proses pindahan?",
+    "answer": "Ya! Semua barang pelanggan kami dilindungi oleh asuransi pengiriman selama proses pindahan berlangsung. Kami bekerja sama dengan perusahaan asuransi terpercaya untuk memberikan ketenangan pikiran kepada Anda."
   },
   {
     "id": 3,
-    "question": "Apakah saya perlu membongkar furniture sendiri?",
-    "answer": "Tidak. Tim kami akan melakukan bongkar pasang furniture secara profesional. Kami memiliki alat dan tenaga ahli untuk menangani semua jenis furniture."
+    "question": "Berapa lama proses pindahan berlangsung?",
+    "answer": "Durasi pindahan tergantung pada volume barang dan jarak tempuh. Untuk pindahan rumah tipe 36–45 dalam kota, biasanya membutuhkan waktu 4–8 jam. Pindahan kantor skala besar atau antar kota bisa memakan 1–3 hari."
   },
   {
     "id": 4,
-    "question": "Bagaimana cara mendapatkan estimasi biaya?",
-    "answer": "Anda dapat mengisi formulir estimasi di halaman ini atau menghubungi hotline kami. Kami akan segera memberikan penawaran harga terbaik."
+    "question": "Apakah PindahanRumah melayani pindahan luar kota?",
+    "answer": "Ya, kami melayani pindahan ke seluruh wilayah Jawa, Bali, Sumatera, Kalimantan, dan Sulawesi. Untuk pindahan luar pulau, kami juga menyediakan layanan pengiriman via ekspedisi kontainer terpercaya."
+  },
+  {
+    "id": 5,
+    "question": "Apa saja yang termasuk dalam layanan packing profesional?",
+    "answer": "Layanan packing profesional kami mencakup pembungkusan menggunakan Bubble Wrap, Stretch Film, Kardus Double Wall, dan Wooden Crate untuk barang sangat berharga. Tim kami juga memberikan labeling pada setiap kotak untuk memudahkan proses unboxing."
+  },
+  {
+    "id": 6,
+    "question": "Bagaimana cara memesan layanan pindahan?",
+    "answer": "Anda bisa menghubungi kami melalui WhatsApp, telepon, atau mengisi formulir di website ini. Tim kami akan segera menghubungi Anda untuk survei kebutuhan dan memberikan estimasi biaya dalam waktu kurang dari 30 menit."
+  },
+  {
+    "id": 7,
+    "question": "Apakah ada biaya tambahan yang tidak tertera di penawaran?",
+    "answer": "Tidak ada biaya tersembunyi. Kami berkomitmen pada transparansi harga. Semua biaya — termasuk tenaga kerja, material packing, dan transportasi — sudah tercantum jelas dalam penawaran resmi kami."
+  },
+  {
+    "id": 8,
+    "question": "Bisakah pindahan dilakukan di akhir pekan atau hari libur?",
+    "answer": "Tentu! Kami beroperasi 7 hari seminggu, termasuk akhir pekan dan hari libur nasional. Namun, kami menyarankan pemesanan minimal 3 hari sebelumnya untuk jadwal akhir pekan, karena permintaan biasanya lebih tinggi."
   }
 ]

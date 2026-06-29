@@ -1,32 +1,39 @@
-"use client";
-import { motion } from "framer-motion";
-import { statsData } from "@/constants";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+'use client'
+
+import { motion } from 'framer-motion'
+import { useScrollAnimation, staggerContainerVariants, cardVariants } from '@/hooks/useScrollAnimation'
+import company from '@/data/company.json'
 
 export default function Stats() {
-  const { ref, isInView } = useScrollAnimation();
+  const { ref, controls } = useScrollAnimation()
 
   return (
-    <motion.section
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
-      className="py-stack-lg bg-primary text-white"
+    <section
+      className="bg-primary py-12 md:py-16"
+      aria-label="Statistik dan pencapaian PindahanRumah"
     >
-      <div className="container mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        {statsData.map((stat, idx) => (
+      <motion.div
+        ref={ref}
+        variants={staggerContainerVariants}
+        initial="hidden"
+        animate={controls}
+        className="container-main grid grid-cols-2 lg:grid-cols-4 gap-8"
+      >
+        {company.stats.map((stat, index) => (
           <motion.div
-            key={stat.label}
-            initial={{ scale: 0.8 }}
-            animate={isInView ? { scale: 1 } : {}}
-            transition={{ delay: idx * 0.1, type: "spring" }}
+            key={index}
+            variants={cardVariants}
+            className="text-center"
           >
-            <div className="text-4xl font-bold text-secondary">{stat.value}</div>
-            <div className="text-surface-variant font-label-bold mt-2">{stat.label}</div>
+            <p className="font-montserrat font-bold text-3xl md:text-4xl text-secondary mb-2">
+              {stat.value}
+            </p>
+            <p className="font-franklin text-sm md:text-base text-white/70">
+              {stat.label}
+            </p>
           </motion.div>
         ))}
-      </div>
-    </motion.section>
-  );
+      </motion.div>
+    </section>
+  )
 }

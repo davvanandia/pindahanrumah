@@ -1,23 +1,22 @@
-import type { Metadata } from "next";
-import { Montserrat, Libre_Franklin } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import WhatsAppFloat from "@/components/shared/WhatsAppFloat";
-import company from "@/data/company.json";
+import type { Metadata } from 'next'
+import { Montserrat, Libre_Franklin } from 'next/font/google'
+import './globals.css'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+import WhatsAppFloat from '@/components/shared/WhatsAppFloat'
+import company from '@/data/company.json'
 
 const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  display: "swap",
-});
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  display: 'swap',
+})
 
 const libreFranklin = Libre_Franklin({
-  subsets: ["latin"],
-  variable: "--font-libre",
-  display: "swap",
-});
+  subsets: ['latin'],
+  variable: '--font-franklin',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -25,68 +24,83 @@ export const metadata: Metadata = {
     template: `%s | ${company.name}`,
   },
   description: company.description,
-  keywords: ["pindahan", "jasa pindahan", "relokasi", "pindahan rumah", "pindahan kantor"],
+  keywords: [
+    'jasa pindahan',
+    'pindahan rumah',
+    'pindahan kantor',
+    'jasa packing',
+    'relokasi profesional',
+    'PindahanRumah',
+    'pindahan Jakarta',
+    'jasa pindahan profesional',
+  ],
+  authors: [{ name: company.name }],
+  creator: company.name,
   openGraph: {
-    title: `${company.name} - ${company.tagline}`,
-    description: company.description,
-    url: "https://pindahanrumah.id",
+    type: 'website',
+    locale: 'id_ID',
+    url: 'https://www.pindahanrumah.online',
     siteName: company.name,
-    locale: "id_ID",
-    type: "website",
+    title: `${company.name} | ${company.tagline}`,
+    description: company.description,
   },
   twitter: {
-    card: "summary_large_image",
-    title: `${company.name} - ${company.tagline}`,
+    card: 'summary_large_image',
+    title: `${company.name} | ${company.tagline}`,
     description: company.description,
   },
-};
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: company.name,
+  description: company.description,
+  telephone: company.phone,
+  email: company.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: company.address,
+    addressLocality: 'Jakarta Timur',
+    addressRegion: 'DKI Jakarta',
+    addressCountry: 'ID',
+  },
+  url: 'https://www.pindahanrumah.online',
+  openingHours: 'Mo-Sa 07:00-20:00',
+  priceRange: '$$',
+  sameAs: [company.social.instagram, company.social.facebook],
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: company.name,
-    description: company.description,
-    telephone: company.phone,
-    email: company.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: company.address,
-      addressCountry: "ID",
-    },
-    url: "https://pindahanrumah.id",
-  };
-
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="id" className={cn(montserrat.variable, libreFranklin.variable)}>
+    <html lang="id" className={`${montserrat.variable} ${libreFranklin.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX');
-            `,
-          }}
-        />
       </head>
-      <body className="bg-background text-foreground font-body-md antialiased">
+      <body className="bg-background text-on-surface antialiased">
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <WhatsAppFloat />
       </body>
     </html>
-  );
+  )
 }

@@ -2,71 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 210 20% 98%;
-    --foreground: 200 15% 12%;
-    --card: 0 0% 100%;
-    --card-foreground: 200 15% 12%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 200 15% 12%;
-    --primary: 210 100% 12%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 25 100% 55%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 210 10% 90%;
-    --muted-foreground: 200 10% 40%;
-    --accent: 25 100% 55%;
-    --accent-foreground: 0 0% 0%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 210 10% 85%;
-    --input: 210 10% 85%;
-    --ring: 210 100% 12%;
-    --radius: 0.5rem;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Libre+Franklin:wght@400;500;700&display=swap');
 
-  .dark {
-    --background: 200 15% 8%;
-    --foreground: 210 20% 98%;
-    --card: 200 15% 10%;
-    --card-foreground: 210 20% 98%;
-    --popover: 200 15% 10%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 210 100% 12%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 25 100% 55%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 200 15% 20%;
-    --muted-foreground: 210 10% 70%;
-    --accent: 25 100% 55%;
-    --accent-foreground: 0 0% 0%;
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 200 15% 25%;
-    --input: 200 15% 25%;
-    --ring: 210 100% 12%;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    @apply bg-background text-on-surface font-franklin antialiased;
     font-family: 'Libre Franklin', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  ::selection {
+    @apply bg-secondary text-white;
   }
 }
 
-/* Custom utility for diagonal clip */
-.hero-diagonal {
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-}
-@media (max-width: 768px) {
-  .hero-diagonal {
-    clip-path: none;
+@layer components {
+  .container-main {
+    @apply max-w-container-max mx-auto px-4 md:px-margin-desktop;
   }
-}
 
-html {
-  scroll-behavior: smooth;
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .heading-xl {
+    font-family: 'Montserrat', sans-serif;
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+  }
+
+  .heading-lg {
+    font-family: 'Montserrat', sans-serif;
+    @apply text-2xl md:text-3xl font-bold leading-snug tracking-tight;
+  }
+
+  .heading-md {
+    font-family: 'Montserrat', sans-serif;
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+  }
+
+  .label-bold {
+    font-family: 'Montserrat', sans-serif;
+    @apply text-sm font-bold tracking-widest uppercase;
+  }
+
+  .btn-primary {
+    @apply bg-secondary text-white font-bold text-sm tracking-widest uppercase px-8 py-4 
+           hover:brightness-110 active:scale-95 transition-all duration-200 
+           inline-flex items-center justify-center gap-2;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-bold text-sm tracking-widest uppercase px-8 py-4
+           hover:bg-primary hover:text-white active:scale-95 transition-all duration-200
+           inline-flex items-center justify-center gap-2;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn-outline-white {
+    @apply border-2 border-white text-white font-bold text-sm tracking-widest uppercase px-8 py-4
+           hover:bg-white/10 active:scale-95 transition-all duration-200
+           inline-flex items-center justify-center gap-2;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .card-base {
+    @apply bg-white border border-surface-variant hover:border-secondary transition-all duration-300;
+  }
 }
