@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation, fadeUpVariants } from '@/hooks/useScrollAnimation'
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, Send, Link } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -49,7 +49,33 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen py-stack-lg bg-background">
       <div className="container-main">
-        {/* Heading - konsisten dengan layanan/page.tsx */}
+        {/* Breadcrumb */}
+        <nav
+          className="text-sm font-franklin text-on-surface-variant/60 mb-6"
+          aria-label="Breadcrumb"
+        >
+          <ol className="flex items-center gap-2">
+            <li>
+              <Link
+                href="/"
+                className="hover:text-secondary transition-colors"
+              >
+                Beranda
+              </Link>
+            </li>
+            <li className="text-on-surface-variant/30" aria-hidden="true">
+              /
+            </li>
+            <li
+              className="text-secondary font-montserrat font-bold text-xs tracking-widest uppercase"
+              aria-current="page"
+            >
+              Kontak
+            </li>
+          </ol>
+        </nav>
+
+        {/* Heading */}
         <motion.div
           ref={headingRef}
           variants={fadeUpVariants}

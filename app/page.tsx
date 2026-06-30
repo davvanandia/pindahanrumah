@@ -26,9 +26,9 @@ export default function HomePage() {
       <Stats />
       <Services />
       <SpecialServices />
+      <QuoteForm />
       {/* <Testimonials /> */}
       {/* <FAQSection /> */}
-      <QuoteForm />
       <MapEmbed />
     </>
   )

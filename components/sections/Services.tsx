@@ -23,15 +23,12 @@ const serviceImages: Record<string, string> = {
   'pindahan-kantor': '/kantor.png',
   'pindahan-apartemen': '/apartemen.png',
   'pindahan-gudang': '/gudang.png',
-  'pindahan-kos-kontrakan': '/kontrakan.png'
+  'pindahan-kos-kontrakan': '/kontrakan.png',
 }
 
 export default function Services() {
-  const { ref: headingRef, controls: headingControls } =
-    useScrollAnimation()
-
-  const { ref: gridRef, controls: gridControls } =
-    useScrollAnimation()
+  const { ref: headingRef, controls: headingControls } = useScrollAnimation()
+  const { ref: gridRef, controls: gridControls } = useScrollAnimation()
 
   return (
     <section
@@ -40,7 +37,6 @@ export default function Services() {
       aria-labelledby="services-heading"
     >
       <div className="container-main">
-        {/* Heading */}
         <motion.div
           ref={headingRef}
           variants={fadeUpVariants}
@@ -48,20 +44,12 @@ export default function Services() {
           animate={headingControls}
           className="mb-12"
         >
-          <h2
-            id="services-heading"
-            className="heading-lg text-primary mb-3"
-          >
+          <h2 id="services-heading" className="heading-lg text-primary mb-3">
             Layanan Pindahan Utama
           </h2>
-
-          <div
-            className="w-16 h-1 bg-secondary"
-            aria-hidden="true"
-          />
+          <div className="w-16 h-1 bg-secondary" aria-hidden="true" />
         </motion.div>
 
-        {/* Grid */}
         <motion.div
           ref={gridRef}
           variants={staggerContainerVariants}
@@ -77,27 +65,21 @@ export default function Services() {
 
             return (
               <motion.article
-                key={service.id}
-                id={service.id}
+                key={service.slug}
+                id={service.slug}
                 variants={cardVariants}
                 className="group card-base overflow-hidden flex flex-col"
               >
-                {/* Image */}
                 <div className="relative h-60 overflow-hidden">
                   <Image
-                    src={
-                      serviceImages[service.id] ??
-                      '/images/rumah.png'
-                    }
+                    src={serviceImages[service.slug] ?? '/images/rumah.png'}
                     alt={service.imageAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    priority={service.id === 'pindahan-rumah'}
+                    priority={service.slug === 'pindahan-rumah'}
                   />
-
                   <div className="absolute inset-0 bg-black/25" />
-
                   {service.badge && (
                     <div className="absolute top-4 left-4 z-10 bg-secondary text-white font-montserrat font-bold text-xs tracking-widest uppercase px-3 py-1 rounded">
                       {service.badge}
@@ -105,21 +87,15 @@ export default function Services() {
                   )}
                 </div>
 
-                {/* Content */}
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="heading-md text-primary mb-3">
                     {service.title}
                   </h3>
-
                   <p className="font-franklin text-on-surface-variant text-sm leading-relaxed mb-5 flex-1">
                     {service.description}
                   </p>
 
-                  {/* Features */}
-                  <ul
-                    className="space-y-2 mb-6"
-                    aria-label={`Fitur ${service.title}`}
-                  >
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature) => (
                       <li
                         key={feature}
@@ -138,13 +114,11 @@ export default function Services() {
                             clipRule="evenodd"
                           />
                         </svg>
-
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  {/* Actions */}
                   <div className="flex gap-3">
                     <a
                       href={waUrl}
@@ -155,9 +129,8 @@ export default function Services() {
                     >
                       Pesan Sekarang
                     </a>
-
                     <Link
-                      href={`/layanan#${service.id}`}
+                      href={`/layanan/${service.slug}`}
                       className="px-4 border border-primary text-primary font-montserrat font-bold text-xs tracking-widest uppercase hover:bg-primary hover:text-white transition-all flex items-center"
                       aria-label={`Detail layanan ${service.title}`}
                     >
@@ -170,18 +143,13 @@ export default function Services() {
           })}
         </motion.div>
 
-        {/* View All */}
         <motion.div
           variants={fadeUpVariants}
           initial="hidden"
           animate={gridControls}
           className="mt-10 text-center"
         >
-          <Link
-            href="/layanan"
-            className="btn-outline"
-            aria-label="Lihat semua layanan PindahanRumah"
-          >
+          <Link href="/layanan" className="btn-outline" aria-label="Lihat semua layanan PindahanRumah">
             Lihat Semua Layanan
           </Link>
         </motion.div>

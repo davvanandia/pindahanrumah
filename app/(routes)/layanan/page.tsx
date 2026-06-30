@@ -36,6 +36,32 @@ export default function LayananPage() {
   return (
     <main className="min-h-screen py-stack-lg bg-background">
       <div className="container-main">
+        {/* Breadcrumb */}
+        <nav
+          className="text-sm font-franklin text-on-surface-variant/60 mb-6"
+          aria-label="Breadcrumb"
+        >
+          <ol className="flex items-center gap-2">
+            <li>
+              <Link
+                href="/"
+                className="hover:text-secondary transition-colors"
+              >
+                Beranda
+              </Link>
+            </li>
+            <li className="text-on-surface-variant/30" aria-hidden="true">
+              /
+            </li>
+            <li
+              className="text-secondary font-montserrat font-bold text-xs tracking-widest uppercase"
+              aria-current="page"
+            >
+              Layanan Pindahan
+            </li>
+          </ol>
+        </nav>
+
         {/* Heading */}
         <motion.div
           ref={headingRef}
@@ -69,8 +95,8 @@ export default function LayananPage() {
 
             return (
               <motion.article
-                key={service.id}
-                id={service.id}
+                key={service.slug}
+                id={service.slug}
                 variants={cardVariants}
                 className="group card-base overflow-hidden flex flex-col"
               >
@@ -78,14 +104,14 @@ export default function LayananPage() {
                 <div className="relative h-60 overflow-hidden">
                   <Image
                     src={
-                      serviceImages[service.id] ??
+                      serviceImages[service.slug] ??
                       '/images/rumah.png'
                     }
                     alt={service.imageAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    priority={service.id === 'pindahan-rumah'}
+                    priority={service.slug === 'pindahan-rumah'}
                   />
                   <div className="absolute inset-0 bg-black/25" />
                   {service.badge && (
@@ -141,7 +167,7 @@ export default function LayananPage() {
                       Pesan Sekarang
                     </a>
                     <Link
-                      href={`/layanan#${service.id}`}
+                      href={`/layanan/${service.slug}`}
                       className="px-4 border border-primary text-primary font-montserrat font-bold text-xs tracking-widest uppercase hover:bg-primary hover:text-white transition-all flex items-center"
                       aria-label={`Detail layanan ${service.title}`}
                     >

@@ -20,7 +20,7 @@ const libreFranklin = Libre_Franklin({
 
 export const metadata: Metadata = {
   title: {
-    default: `${company.name} | ${company.tagline}`,
+    default: `${company.name} - ${company.tagline}`,
     template: `%s | ${company.name}`,
   },
 

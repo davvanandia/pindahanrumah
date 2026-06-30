@@ -62,14 +62,14 @@ const specialItems = [
     iconColor: 'text-primary',
   },
   {
-    id: 'cuci-sofa',
+    id: 'servis-sofa',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8" aria-hidden="true">
         <path d="M4.5 5.25a2.25 2.25 0 00-2.25 2.25v5.25c0 .414.336.75.75.75h.75v3.75a2.25 2.25 0 002.25 2.25h12a2.25 2.25 0 002.25-2.25v-3.75h.75a.75.75 0 00.75-.75V7.5a2.25 2.25 0 00-2.25-2.25h-15zM3 7.5c0-.414.336-.75.75-.75h16.5c.414 0 .75.336.75.75v4.5H3v-4.5z" />
         <path d="M6.75 15.75a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75z" />
       </svg>
     ),
-    title: 'Cuci Sofa Profesional',
+    title: 'Servis Sofa',
     description: 'Layanan home service untuk sofa kotor, bau, atau rusak. Kami datang ke lokasi, pengerjaan rapi dan bergaransi, teknisi berpengalaman, harga terjangkau, gratis survei (sesuai area).',
     tags: ['Cuci Sofa', 'Servis Sofa', 'Ganti Kain', 'Ganti Busa', 'Perbaikan Pegas'],
     colSpan: 'md:col-span-4',
@@ -91,7 +91,6 @@ export default function SpecialServices() {
       aria-labelledby="special-services-heading"
     >
       <div className="container-main">
-        {/* Heading */}
         <motion.div
           ref={headingRef}
           variants={fadeUpVariants}
@@ -107,7 +106,6 @@ export default function SpecialServices() {
           </p>
         </motion.div>
 
-        {/* Bento Grid */}
         <motion.div
           ref={gridRef}
           variants={staggerContainerVariants}
@@ -128,7 +126,6 @@ export default function SpecialServices() {
                 variants={cardVariants}
                 className={`${item.colSpan} ${item.bg} p-8 border border-surface-variant relative overflow-hidden group transition-shadow duration-300 hover:shadow-lg`}
               >
-                {/* Icon with rounded background */}
                 <div className={`w-14 h-14 rounded-full ${item.iconBg} flex items-center justify-center mb-6`}>
                   <div className={item.iconColor}>{item.icon}</div>
                 </div>
@@ -149,32 +146,38 @@ export default function SpecialServices() {
                     ))}
                   </div>
                 )}
-                <a
-                  href={waUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-secondary text-white font-montserrat font-bold text-xs tracking-widest uppercase px-5 py-2.5 hover:brightness-110 active:scale-95 transition-all"
-                  aria-label={`Konsultasi layanan ${item.title} via WhatsApp`}
-                >
-                  Konsultasi Sekarang
-                </a>
+
+                {/* Dua tombol sejajar */}
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-secondary text-white font-montserrat font-bold text-xs tracking-widest uppercase px-5 py-2.5 text-center hover:brightness-110 active:scale-95 transition-all"
+                    aria-label={`Konsultasi layanan ${item.title} via WhatsApp`}
+                  >
+                    Konsultasi Sekarang
+                  </a>
+                  <Link
+                    href={`/layanan-tambahan/${item.id}`}
+                    className="flex-1 border border-primary text-primary bg-white font-montserrat font-bold text-xs tracking-widest uppercase px-5 py-2.5 text-center hover:bg-primary hover:text-white transition-all"
+                    aria-label={`Detail layanan ${item.title}`}
+                  >
+                    Detail
+                  </Link>
+                </div>
               </motion.div>
             )
           })}
         </motion.div>
 
-        {/* Tombol Lihat Semua Layanan */}
         <motion.div
           variants={fadeUpVariants}
           initial="hidden"
           animate={gridControls}
           className="mt-10 text-center"
         >
-          <Link
-            href="/layanan-tambahan"
-            className="btn-outline"
-            aria-label="Lihat semua layanan spesialis dan tambahan"
-          >
+          <Link href="/layanan-tambahan" className="btn-outline" aria-label="Lihat semua layanan spesialis dan tambahan">
             Lihat Semua Layanan
           </Link>
         </motion.div>

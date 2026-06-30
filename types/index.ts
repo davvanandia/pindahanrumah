@@ -1,3 +1,4 @@
+// types/index.ts
 export interface Company {
   name: string
   tagline: string
@@ -35,6 +36,7 @@ export interface Service {
   description: string
   features: string[]
   whatsappMessage: string
+  gallery?: string[] // <--- tambahkan ini
 }
 
 export interface FAQ {

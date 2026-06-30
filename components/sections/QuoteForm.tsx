@@ -14,6 +14,7 @@ const jenisOptions = [
   'Jasa Packing',
   'Bongkar Pasang Furniture',
   'Angkut Barang Berat',
+  'Servis Sofa',
 ]
 
 export default function QuoteForm() {
@@ -94,12 +95,6 @@ Mohon bantuannya, terima kasih!`
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="mt-10">
-              <p className="font-montserrat font-bold text-xs text-white/40 uppercase tracking-widest mb-3">
-                Jam Operasional
-              </p>
-              <p className="font-franklin text-white/60 text-sm">{company.operationalHours}</p>
             </div>
           </aside>
 

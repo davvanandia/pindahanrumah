@@ -9,7 +9,8 @@
     "imageAlt": "Ruang tamu modern siap dipindahkan",
     "description": "Rumah tipe 36, 45, 60, 70, 100+. Bongkar pasang furnitur, packing pecah belah, dan penataan barang.",
     "features": ["Bongkar Pasang Furnitur", "Packing Pecah Belah", "Pengangkutan & Penataan", "Asuransi Barang"],
-    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Rumah"
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Rumah",
+    "gallery": ["/rumah.png", "/rumah2.jpeg"]
   },
   {
     "id": "pindahan-apartemen",
@@ -17,11 +18,12 @@
     "slug": "pindahan-apartemen",
     "category": "utama",
     "badge": null,
-    "image": "/apartmen.png",
+    "image": "/apartemen.png",
     "imageAlt": "Apartemen modern",
     "description": "Packing profesional, koordinasi dengan pengelola apartemen, penggunaan troli dan perlengkapan khusus.",
     "features": ["Packing Profesional", "Koordinasi Pengelola", "Troli Khusus", "Perlengkapan Anti Gores"],
-    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Apartemen"
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Apartemen",
+    "gallery": ["/apartemen.png", "/apartemen2.jpeg"]
   },
   {
     "id": "pindahan-kantor",
@@ -33,7 +35,8 @@
     "imageAlt": "Kantor modern",
     "description": "Relokasi meja kerja, kursi, arsip, komputer, server, rak dan lemari arsip. Minimal downtime operasional.",
     "features": ["Meja & Kursi Kantor", "Arsip & Dokumen", "Komputer & Server", "Rak & Lemari Arsip"],
-    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Kantor"
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Kantor",
+    "gallery": ["/kantor.png", "/hero-office.jpg"]
   },
   {
     "id": "pindahan-gudang",
@@ -45,7 +48,8 @@
     "imageAlt": "Gudang industri",
     "description": "Penanganan rak gudang, stok barang, mesin dan peralatan industri secara presisi dan terencana.",
     "features": ["Rak Gudang", "Stok Barang", "Mesin & Peralatan", "Tim Ahli Logistik"],
-    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Gudang"
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Gudang",
+    "gallery": ["/gudang.png", "/gudang2.jpeg"]
   },
   {
     "id": "pindahan-kos-kontrakan",
@@ -57,7 +61,8 @@
     "imageAlt": "Kamar kos yang rapi",
     "description": "Pindahan praktis untuk kasur, lemari, meja belajar, dan motor. Cepat, aman, dan terjangkau.",
     "features": ["Kasur & Lemari", "Meja Belajar", "Motor", "Harga Terjangkau"],
-    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Kos & Kontrakan"
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang layanan Pindahan Kos & Kontrakan",
+    "gallery": ["/kontrakan.png", "/kontrakan2.jpeg"]
   },
   {
     "id": "jasa-packing",
@@ -69,7 +74,8 @@
     "imageAlt": "Material packing berkualitas",
     "description": "Perlindungan maksimal dengan Bubble Wrap, Stretch Film, Kardus Double Wall, dan Packing Kayu untuk barang berharga.",
     "features": ["Bubble Wrap", "Stretch Film", "Kardus Double Wall", "Packing Kayu"],
-    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Jasa Packing"
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Jasa Packing",
+    "gallery": ["/packing.png"]
   },
   {
     "id": "bongkar-pasang-furniture",
@@ -81,7 +87,8 @@
     "imageAlt": "Tim ahli memasang furnitur",
     "description": "Tim profesional untuk bongkar pasang lemari, tempat tidur, meja kantor, hingga kitchen set custom.",
     "features": ["Lemari", "Tempat Tidur", "Meja Kantor", "Kitchen Set"],
-    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Bongkar Pasang Furnitur"
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Bongkar Pasang Furnitur",
+    "gallery": ["/furniture.png"]
   },
   {
     "id": "angkut-barang-berat",
@@ -93,18 +100,20 @@
     "imageAlt": "Pengangkutan barang berat",
     "description": "Penanganan brankas, mesin industri, mesin fotokopi, genset, dan barang berat lainnya dengan alat hidrolik dan tim terlatih.",
     "features": ["Brankas", "Mesin Industri", "Mesin Fotokopi", "Genset"],
-    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Angkut Barang Berat"
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Angkut Barang Berat",
+    "gallery": ["/angkut.png", "/pindahan7.jpeg"]
   },
   {
-    "id": "cuci-sofa",
-    "title": "Cuci Sofa Profesional",
-    "slug": "cuci-sofa",
+    "id": "servis-sofa",
+    "title": "Servis Sofa",
+    "slug": "servis-sofa",
     "category": "spesialis",
     "badge": "NEW",
-    "image": "/cuci-sofa.png",
+    "image": "/servis-sofa.png",
     "imageAlt": "Pembersihan sofa profesional",
     "description": "Layanan home service untuk sofa kotor, bau, atau rusak. Cuci, servis, ganti kain/busa, perbaikan pegas & rangka.",
     "features": ["Cuci Sofa", "Servis Sofa Rusak", "Ganti Kain & Busa", "Perbaikan Pegas & Rangka"],
-    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Cuci Sofa Profesional"
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Servis Sofa",
+    "gallery": ["/servis-sofa.png", "/sofa2.jpeg", "/sofa3.jpeg", "/sofa4.jpeg", "/sofa5.jpeg"]
   }
 ]
