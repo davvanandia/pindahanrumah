@@ -26,8 +26,8 @@ export default function HomePage() {
       <Stats />
       <Services />
       <SpecialServices />
-      <Testimonials />
-      <FAQSection />
+      {/* <Testimonials /> */}
+      {/* <FAQSection /> */}
       <QuoteForm />
       <MapEmbed />
     </>

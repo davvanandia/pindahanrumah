@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     default: `${company.name} | ${company.tagline}`,
     template: `%s | ${company.name}`,
   },
+
+  icons: {
+    icon: '/logoPR-transparan.png',
+    shortcut: '/logoPR-transparan.png',
+    apple: '/logoPR-transparan.png',
+  },
+  
   description: company.description,
   keywords: [
     'jasa pindahan',

@@ -14,19 +14,11 @@ import company from '@/data/company.json'
 import { buildWhatsAppUrl } from '@/lib/utils'
 import type { Service } from '@/types'
 
-const mainServices = (services as Service[]).filter(
-  (s) => s.category === 'utama'
+const spesialisServices = (services as Service[]).filter(
+  (s) => s.category === 'spesialis'
 )
 
-const serviceImages: Record<string, string> = {
-  'pindahan-rumah': '/rumah.png',
-  'pindahan-kantor': '/kantor.png',
-  'pindahan-apartemen': '/apartemen.png',
-  'pindahan-gudang': '/gudang.png',
-  'pindahan-kos-kontrakan': '/kontrakan.png'
-}
-
-export default function Services() {
+export default function LayananTambahanPage() {
   const { ref: headingRef, controls: headingControls } =
     useScrollAnimation()
 
@@ -34,11 +26,7 @@ export default function Services() {
     useScrollAnimation()
 
   return (
-    <section
-      className="section-padding bg-background"
-      id="services"
-      aria-labelledby="services-heading"
-    >
+    <main className="min-h-screen py-stack-lg bg-background">
       <div className="container-main">
         {/* Heading */}
         <motion.div
@@ -48,17 +36,13 @@ export default function Services() {
           animate={headingControls}
           className="mb-12"
         >
-          <h2
-            id="services-heading"
-            className="heading-lg text-primary mb-3"
-          >
-            Layanan Pindahan Utama
-          </h2>
-
-          <div
-            className="w-16 h-1 bg-secondary"
-            aria-hidden="true"
-          />
+          <h1 className="heading-lg text-primary mb-3">
+            Layanan Spesialis & Tambahan
+          </h1>
+          <div className="w-16 h-1 bg-secondary" aria-hidden="true" />
+          <p className="font-franklin text-on-surface-variant max-w-2xl mt-4">
+            Layanan pendukung profesional: packing, bongkar pasang, handling barang berat, dan perawatan sofa.
+          </p>
         </motion.div>
 
         {/* Grid */}
@@ -69,7 +53,7 @@ export default function Services() {
           animate={gridControls}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {mainServices.map((service) => {
+          {spesialisServices.map((service) => {
             const waUrl = buildWhatsAppUrl(
               company.whatsapp,
               service.whatsappMessage
@@ -85,19 +69,13 @@ export default function Services() {
                 {/* Image */}
                 <div className="relative h-60 overflow-hidden">
                   <Image
-                    src={
-                      serviceImages[service.id] ??
-                      '/images/rumah.png'
-                    }
+                    src={service.image}
                     alt={service.imageAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    priority={service.id === 'pindahan-rumah'}
                   />
-
                   <div className="absolute inset-0 bg-black/25" />
-
                   {service.badge && (
                     <div className="absolute top-4 left-4 z-10 bg-secondary text-white font-montserrat font-bold text-xs tracking-widest uppercase px-3 py-1 rounded">
                       {service.badge}
@@ -110,16 +88,12 @@ export default function Services() {
                   <h3 className="heading-md text-primary mb-3">
                     {service.title}
                   </h3>
-
                   <p className="font-franklin text-on-surface-variant text-sm leading-relaxed mb-5 flex-1">
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <ul
-                    className="space-y-2 mb-6"
-                    aria-label={`Fitur ${service.title}`}
-                  >
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature) => (
                       <li
                         key={feature}
@@ -138,7 +112,6 @@ export default function Services() {
                             clipRule="evenodd"
                           />
                         </svg>
-
                         {feature}
                       </li>
                     ))}
@@ -155,9 +128,8 @@ export default function Services() {
                     >
                       Pesan Sekarang
                     </a>
-
                     <Link
-                      href={`/layanan#${service.id}`}
+                      href={`/layanan-tambahan#${service.id}`}
                       className="px-4 border border-primary text-primary font-montserrat font-bold text-xs tracking-widest uppercase hover:bg-primary hover:text-white transition-all flex items-center"
                       aria-label={`Detail layanan ${service.title}`}
                     >
@@ -170,7 +142,7 @@ export default function Services() {
           })}
         </motion.div>
 
-        {/* View All */}
+        {/* Kembali ke Layanan Utama */}
         <motion.div
           variants={fadeUpVariants}
           initial="hidden"
@@ -180,12 +152,12 @@ export default function Services() {
           <Link
             href="/layanan"
             className="btn-outline"
-            aria-label="Lihat semua layanan PindahanRumah"
+            aria-label="Kembali ke layanan utama PindahanRumah"
           >
-            Lihat Semua Layanan
+            Kembali ke Layanan Utama
           </Link>
         </motion.div>
       </div>
-    </section>
+    </main>
   )
 }

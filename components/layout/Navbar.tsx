@@ -1,29 +1,65 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { NAV_LINKS } from '@/constants'
 import company from '@/data/company.json'
 import { buildWhatsAppUrl } from '@/lib/utils'
+
+// Definisi menu secara lokal (menggantikan NAV_LINKS dari constants)
+const NAV_LINKS = [
+  { href: '/', label: 'Beranda' },
+  { href: '/layanan', label: 'Layanan Pindahan' },
+  { href: '/layanan-tambahan', label: 'Layanan Tambahan' },
+  { href: '/kontak', label: 'Kontak' },
+]
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
 
+  // Refs untuk deteksi klik di luar
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
+
+  // Efek scroll
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Tutup menu saat rute berubah
   useEffect(() => {
     setIsOpen(false)
   }, [pathname])
 
-  const waUrl = buildWhatsAppUrl(company.whatsapp, 'Halo PindahanRumah, saya ingin mendapatkan estimasi biaya pindahan.')
+  // Tutup menu saat klik di luar (click‑outside)
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node
+      if (
+        isOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(target) &&
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(target)
+      ) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [isOpen])
+
+  const waUrl = buildWhatsAppUrl(
+    company.whatsapp,
+    'Halo PindahanRumah, saya ingin mendapatkan estimasi biaya pindahan.'
+  )
 
   return (
     <header
@@ -36,12 +72,20 @@ export default function Navbar() {
         className="flex justify-between items-center w-full px-4 md:px-margin-desktop max-w-container-max mx-auto h-20"
         aria-label="Navigasi utama"
       >
-        {/* Logo */}
+        {/* Logo + Teks */}
         <Link
           href="/"
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-3 group"
           aria-label="PindahanRumah - Halaman Utama"
         >
+          <Image
+            src="/logoPR-transparan.png"
+            alt="PindahanRumah Logo"
+            width={40}
+            height={40}
+            className="h-9 w-auto object-contain"
+            priority
+          />
           <span className="font-montserrat font-bold text-xl md:text-2xl text-primary tracking-tight group-hover:text-secondary transition-colors">
             Pindahan <span className="text-secondary">Rumah</span>
           </span>
@@ -50,7 +94,10 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-8" role="list">
           {NAV_LINKS.map((link) => {
-            const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
+            const isActive =
+              pathname === link.href ||
+              (link.href !== '/' && pathname.startsWith(link.href + '/'))
+
             return (
               <Link
                 key={link.href}
@@ -87,15 +134,28 @@ export default function Navbar() {
 
         {/* Mobile Hamburger */}
         <button
+          ref={hamburgerRef}
           className="lg:hidden flex flex-col gap-1.5 p-2 group"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
         >
-          <span className={`block w-6 h-0.5 bg-primary transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-primary transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-primary transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span
+            className={`block w-6 h-0.5 bg-primary transition-all duration-300 ${
+              isOpen ? 'rotate-45 translate-y-2' : ''
+            }`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-primary transition-all duration-300 ${
+              isOpen ? 'opacity-0' : ''
+            }`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-primary transition-all duration-300 ${
+              isOpen ? '-rotate-45 -translate-y-2' : ''
+            }`}
+          />
         </button>
       </nav>
 
@@ -103,6 +163,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            ref={mobileMenuRef}
             id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -112,7 +173,10 @@ export default function Navbar() {
           >
             <nav className="flex flex-col px-4 py-4 gap-1" aria-label="Navigasi mobile">
               {NAV_LINKS.map((link) => {
-                const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
+                const isActive =
+                  pathname === link.href ||
+                  (link.href !== '/' && pathname.startsWith(link.href + '/'))
+
                 return (
                   <Link
                     key={link.href}
