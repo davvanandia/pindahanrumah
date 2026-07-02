@@ -150,7 +150,7 @@ export default function Services() {
           className="mt-10 text-center"
         >
           <Link href="/layanan" className="btn-outline" aria-label="Lihat semua layanan PindahanRumah">
-            Lihat Semua Layanan
+            Lihat Semua Layanan Pindahan
           </Link>
         </motion.div>
       </div>

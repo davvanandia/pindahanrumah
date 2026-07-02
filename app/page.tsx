@@ -23,7 +23,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Stats />
+      {/* <Stats /> */}
       <Services />
       <SpecialServices />
       <QuoteForm />

@@ -17,6 +17,7 @@ const serviceImages: Record<string, string> = {
   'bongkar-pasang-furniture': '/furniture.png',
   'angkut-barang-berat': '/angkut.png',
   'servis-sofa': '/servis-sofa.png',
+  'service-ac': '/service-ac.jpeg',
 }
 
 // Generate static params untuk layanan spesialis

@@ -115,5 +115,27 @@
     "features": ["Cuci Sofa", "Servis Sofa Rusak", "Ganti Kain & Busa", "Perbaikan Pegas & Rangka"],
     "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Servis Sofa",
     "gallery": ["/servis-sofa.png", "/sofa2.jpeg", "/sofa3.jpeg", "/sofa4.jpeg", "/sofa5.jpeg"]
+  },
+  {
+    "id": "service-ac",
+    "title": "Servis AC",
+    "slug": "service-ac",
+    "category": "spesialis",
+    "badge": null,
+    "image": "/service-ac.jpeg",
+    "imageAlt": "Teknisi sedang memperbaiki AC",
+    "description": "AC Kurang Dingin? Bocor? Berisik? Bau Tidak Sedap? Serahkan kepada teknisi kami yang berpengalaman!",
+    "features": [
+      "Servis AC Semua Merek",
+      "Cuci AC Indoor & Outdoor",
+      "Isi dan Tambah Freon",
+      "Perbaikan AC Mati Total",
+      "Bongkar Pasang AC",
+      "Pindah Lokasi AC",
+      "Perbaikan Kebocoran & Instalasi Baru",
+      "Pengecekan Menyeluruh dengan Garansi Pekerjaan"
+    ],
+    "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Servis AC",
+    "gallery": ["/service-ac.jpeg"]
   }
 ]

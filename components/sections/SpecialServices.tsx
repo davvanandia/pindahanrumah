@@ -79,6 +79,23 @@ const specialItems = [
     iconBg: 'bg-white',
     iconColor: 'text-primary',
   },
+  {
+    id: 'service-ac',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8" aria-hidden="true">
+        <path d="M12 2.25a.75.75 0 01.75.75v3a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM12 18.75a.75.75 0 01.75.75v3a.75.75 0 01-1.5 0v-3a.75.75 0 01.75-.75zM4.5 11.25a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zM19.5 11.25a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zM5.03 5.03a.75.75 0 011.06 0l1.5 1.5a.75.75 0 01-1.06 1.06l-1.5-1.5a.75.75 0 010-1.06zM18.97 5.03a.75.75 0 011.06 0l-1.5 1.5a.75.75 0 01-1.06-1.06l1.5-1.5zM5.03 18.97a.75.75 0 011.06 0l1.5-1.5a.75.75 0 01-1.06 1.06l-1.5 1.5a.75.75 0 01-1.06 0zM18.97 18.97a.75.75 0 011.06 0l-1.5 1.5a.75.75 0 01-1.06-1.06l1.5-1.5zM12 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5zM9.75 12a2.25 2.25 0 014.5 0 2.25 2.25 0 01-4.5 0z" />
+      </svg>
+    ),
+    title: 'Servis AC',
+    description: 'AC kurang dingin? Bocor? Berisik? Bau tidak sedap? Serahkan kepada teknisi berpengalaman kami. Servis semua merek, cuci indoor/outdoor, isi freon, perbaikan total, bongkar pasang, dan instalasi baru dengan garansi pekerjaan.',
+    tags: ['Servis Semua Merek', 'Cuci AC', 'Isi Freon', 'Bongkar Pasang', 'Garansi Pekerjaan'],
+    colSpan: 'md:col-span-12', // full width di baris baru
+    bg: 'bg-white',
+    textColor: 'text-primary',
+    descColor: 'text-on-surface-variant',
+    iconBg: 'bg-secondary',
+    iconColor: 'text-white',
+  },
 ]
 
 export default function SpecialServices() {
@@ -178,7 +195,7 @@ export default function SpecialServices() {
           className="mt-10 text-center"
         >
           <Link href="/layanan-tambahan" className="btn-outline" aria-label="Lihat semua layanan spesialis dan tambahan">
-            Lihat Semua Layanan
+            Lihat Semua Layanan Tambahan
           </Link>
         </motion.div>
       </div>

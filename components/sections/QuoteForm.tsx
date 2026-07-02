@@ -15,6 +15,7 @@ const jenisOptions = [
   'Bongkar Pasang Furniture',
   'Angkut Barang Berat',
   'Servis Sofa',
+  'Servis AC',
 ]
 
 export default function QuoteForm() {
@@ -68,7 +69,7 @@ Mohon bantuannya, terima kasih!`
                 Dapatkan Estimasi Biaya
               </h2>
               <p className="font-franklin text-white/70 mb-8 leading-relaxed">
-                Lengkapi detail pindahan Anda untuk mendapatkan penawaran harga terbaik dalam waktu kurang dari 30 menit.
+                Lengkapi detail pindahan Anda untuk mendapatkan penawaran harga terbaik, segera!.
               </p>
               <div className="space-y-5">
                 <div className="flex items-start gap-4">
