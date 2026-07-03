@@ -122,7 +122,7 @@
     "slug": "service-ac",
     "category": "spesialis",
     "badge": null,
-    "image": "/service-ac.jpeg",
+    "image": "/servis-ac.png",
     "imageAlt": "Teknisi sedang memperbaiki AC",
     "description": "AC Kurang Dingin? Bocor? Berisik? Bau Tidak Sedap? Serahkan kepada teknisi kami yang berpengalaman!",
     "features": [
@@ -136,6 +136,6 @@
       "Pengecekan Menyeluruh dengan Garansi Pekerjaan"
     ],
     "whatsappMessage": "Halo PindahanRumah, saya ingin bertanya tentang Servis AC",
-    "gallery": ["/service-ac.jpeg"]
+    "gallery": ["/servis-ac.png"]
   }
 ]
