@@ -18,11 +18,19 @@ export interface Company {
   vision: string
   mission: string[]
   history: string
+  owner: Owner[]
 }
 
 export interface Stat {
   value: string
   label: string
+}
+
+export interface Owner {
+  name: string
+  position: string
+  message: string
+  photo: string
 }
 
 export interface Service {

@@ -8,6 +8,7 @@ import FAQSection from '@/components/sections/FAQ'
 import QuoteForm from '@/components/sections/QuoteForm'
 import MapEmbed from '@/components/shared/MapEmbed'
 import company from '@/data/company.json'
+import OwnerMessage from '@/components/sections/OwnerMessage'
 
 export const metadata: Metadata = {
   title: `${company.name} | ${company.tagline}`,
@@ -26,6 +27,7 @@ export default function HomePage() {
       {/* <Stats /> */}
       <Services />
       <SpecialServices />
+      <OwnerMessage/>
       <QuoteForm />
       {/* <Testimonials /> */}
       {/* <FAQSection /> */}

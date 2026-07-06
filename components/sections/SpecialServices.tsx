@@ -71,7 +71,7 @@ const specialItems = [
     ),
     title: 'Servis Sofa',
     description: 'Layanan home service untuk sofa kotor, bau, atau rusak. Kami datang ke lokasi, pengerjaan rapi dan bergaransi, teknisi berpengalaman, harga terjangkau, gratis survei (sesuai area).',
-    tags: ['Cuci Sofa', 'Servis Sofa', 'Ganti Kain', 'Ganti Busa', 'Perbaikan Pegas'],
+    tags: ['Servis Sofa', 'Ganti Kain', 'Ganti Busa', 'Perbaikan Pegas'],
     colSpan: 'md:col-span-4',
     bg: 'bg-primary',
     textColor: 'text-white',
