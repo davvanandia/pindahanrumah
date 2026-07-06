@@ -39,20 +39,20 @@ export default function OwnerMessage() {
 
           {/* Pesan */}
           <div className="space-y-6">
-            <h2 id="owner-heading" className="heading-lg text-primary text-center lg:text-left">
+            {/* <h2 id="owner-heading" className="heading-lg text-primary text-center lg:text-left">
               Kata Owner
-            </h2>
+            </h2> */}
             <blockquote className="font-franklin text-on-surface-variant text-base md:text-lg leading-relaxed italic border-l-4 border-secondary pl-6">
               "{owner.message}"
             </blockquote>
-            <div className="text-center lg:text-left">
+            {/* <div className="text-center lg:text-left">
               <p className="font-montserrat font-bold text-primary text-sm tracking-widest uppercase">
                 {owner.name}
               </p>
               <p className="font-franklin text-on-surface-variant/70 text-sm">
                 {owner.position}
               </p>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </div>
