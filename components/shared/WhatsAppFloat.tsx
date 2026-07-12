@@ -4,7 +4,7 @@ import company from '@/data/company.json'
 
 export default function WhatsAppFloat() {
   // Pastikan nomor WhatsApp tersedia
-  const phoneNumber = company.whatsapp || '6281234567890'
+  const phoneNumber = company.whatsapp || '6285181760004'
   
   // Buat URL WhatsApp dengan pesan default
   const message = encodeURIComponent(
